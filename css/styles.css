@@ -797,10 +797,14 @@ img {
   margin-bottom: 21px;
 }
 
+.form {
+  display: flex;
+}
+
 .input {
-  width: 270px;
+  margin-right: 12px;
+  width: 358px;
   height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -808,64 +812,39 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-  /* align-items: center; */
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
 
-  /* padding-top: 18px;
-  padding-bottom: 18px; */
   padding-left: 5px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
-}
-/* .e-mail {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-left: 5px;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-} */
-
-.subscribe {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  box-sizing: border-box;
-
-  color: var(--secondary-accent-color);
+  background: #2f303a;
 }
 
 .submit {
+  display: flex;
   width: 200px;
-  /* height: 50px; */
-  left: 1201px;
-  top: 2764px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 50px;
+  border: 1px solid transparent;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: var(--accent-color);
+  color: var(--secondary-accent-color);
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-send {
+  margin-left: 10px;
 }
 
 .copyright {
