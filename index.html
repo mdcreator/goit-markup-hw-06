@@ -64,7 +64,7 @@
       <div class="overlay">
         <section class="hero">
           <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-          <a href="#" class="button"> Заказать услугу </a>
+          <button class="button" data-modal-open>Заказать услугу</button>
         </section>
       </div>
 
@@ -427,5 +427,13 @@
         <p>2020 | Developed by GoIT Students</p>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close>Закрыть</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
