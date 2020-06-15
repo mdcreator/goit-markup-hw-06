@@ -334,9 +334,18 @@
 
         <div class="exhortation-block">
           <b class="exhortation">Подпишитесь на рассылку</b>
-          <form>
-            <input class="input" type="email" placeholder="E-mail" />
-            <input class="submit" type="submit" value="Подписаться" />
+          <form class="form">
+            <input
+              type="email"
+              class="input"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="submit">
+              Подписаться<svg class="icon-send" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
