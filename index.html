@@ -431,6 +431,33 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close>Закрыть</button>
+
+        <form class="feedback" autocomplete="on">
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name" />
+          </div>
+
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="telephone" id="tel" />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Почта</label>
+            <input type="email" name="email" id="email" />
+          </div>
+
+          <label for="comment">Комментарий</label>
+          <textarea name="comment" id="comment" cols=""></textarea>
+
+          <input type="checkbox" name="agreement" id="agreement" />
+          <label for="agreement"
+            >Соглашаюсь с рассылкой и принимаю Условия договора</label
+          >
+
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 

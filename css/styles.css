@@ -876,9 +876,12 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
 
+.feedback {
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background-color: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -886,6 +889,30 @@ img {
   border-radius: 4px;
 }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  font-size: 14px;
+
+  color: #757575;
+}
+
+.form-field input {
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
 /* .visually-hidden {
     position: absolute;
     width: 1px;
