@@ -428,11 +428,18 @@
       </div>
     </footer>
 
+    <!-- Модальное окно, форма-->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button data-modal-close>Закрыть</button>
+        <button class="modal-close" data-modal-close>
+          <svg class="icon-closed" width="11" height="11">
+            <use href="./images/sprite-modal.svg#icon-closed"></use>
+          </svg>
+        </button>
 
         <form class="feedback" autocomplete="on">
+          <b class="feedback-title">Оставьте свои данные, мы вам перезвоним</b>
           <div class="form-field">
             <label for="name">Имя</label>
             <input type="text" name="name" id="name" />
@@ -448,13 +455,22 @@
             <input type="email" name="email" id="email" />
           </div>
 
-          <label for="comment">Комментарий</label>
-          <textarea name="comment" id="comment" cols=""></textarea>
+          <div class="form-comment">
+            <label for="comment">Комментарий</label>
+            <textarea
+              name="comment"
+              class="comment"
+              id="comment"
+              cols=""
+            ></textarea>
+          </div>
 
-          <input type="checkbox" name="agreement" id="agreement" />
-          <label for="agreement"
-            >Соглашаюсь с рассылкой и принимаю Условия договора</label
-          >
+          <div class="form-checkbox">
+            <input type="checkbox" name="agreement" id="agreement" />
+            <label for="agreement"
+              >Соглашаюсь с рассылкой и принимаю Условия договора</label
+            >
+          </div>
 
           <button type="submit">Отправить</button>
         </form>
