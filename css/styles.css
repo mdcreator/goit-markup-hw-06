@@ -882,6 +882,8 @@ img {
   position: absolute;
   z-index: 1;
 
+  right: 0;
+
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -903,6 +905,7 @@ img {
 }
 
 .feedback-title {
+  display: block;
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -915,11 +918,11 @@ img {
 }
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 28px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 
@@ -928,7 +931,7 @@ img {
   color: #757575;
 }
 
-.form-field input {
+.form-input {
   margin: 0;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -938,8 +941,24 @@ img {
   border-radius: 4px;
 }
 
-label {
+.form-label {
+  position: absolute;
   margin-bottom: 4px;
+  top: 50%;
+  left: 43px;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: var(--accent-color);
+  left: 10px;
+  transform: translateY(-40px);
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 textarea {

@@ -438,31 +438,37 @@
           </svg>
         </button>
 
-        <form class="feedback" autocomplete="on">
+        <form class="feedback" autocomplete="off">
           <b class="feedback-title">Оставьте свои данные, мы вам перезвоним</b>
           <div class="form-field">
-            <label for="name">Имя</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" class="form-input" name="name" id="name" />
+            <label for="name" class="form-label" placeholder="Иван Иванович"
+              >Имя</label
+            >
           </div>
 
           <div class="form-field">
-            <label for="tel">Телефон</label>
-            <input type="tel" name="telephone" id="tel" />
+            <input type="tel" class="form-input" name="telephone" id="tel" />
+            <label for="tel" class="form-label" placeholder="+380"
+              >Телефон</label
+            >
           </div>
 
           <div class="form-field">
-            <label for="email">Почта</label>
-            <input type="email" name="email" id="email" />
+            <input type="email" class="form-input" name="email" id="email" />
+            <label for="email" class="form-label" placeholder="username@email"
+              >Почта</label
+            >
           </div>
 
           <div class="form-comment">
-            <label for="comment">Комментарий</label>
             <textarea
               name="comment"
               class="comment"
               id="comment"
               cols=""
             ></textarea>
+            <label for="comment">Комментарий</label>
           </div>
 
           <div class="form-checkbox">
