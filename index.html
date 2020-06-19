@@ -433,32 +433,53 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" data-modal-close>
-          <svg class="icon-closed" width="11" height="11">
-            <use href="./images/sprite-modal.svg#icon-closed"></use>
+          <svg class="icon-closed" width="18" height="18">
+            <use href="./images/sprite.svg#icon-closed"></use>
           </svg>
         </button>
 
         <form class="feedback" autocomplete="off">
           <b class="feedback-title">Оставьте свои данные, мы вам перезвоним</b>
           <div class="form-field">
-            <input type="text" class="form-input" name="name" id="name" />
-            <label for="name" class="form-label" placeholder="Иван Иванович"
-              >Имя</label
-            >
+            <input
+              type="text"
+              class="form-input"
+              name="name"
+              id="name"
+              placeholder=" "
+            />
+            <label for="name" class="form-label">Имя</label>
+            <svg class="icon-form" width="18" height="18">
+              <use href="./images/sprite.svg#icon-user"></use>
+            </svg>
           </div>
 
           <div class="form-field">
-            <input type="tel" class="form-input" name="telephone" id="tel" />
-            <label for="tel" class="form-label" placeholder="+380"
-              >Телефон</label
-            >
+            <input
+              type="tlf"
+              class="form-input"
+              name="telephone"
+              id="tlf"
+              placeholder=" "
+            />
+            <label for="tlf" class="form-label">Телефон</label>
+            <svg class="icon-form" width="18" height="18">
+              <use href="./images/sprite.svg#icon-tlf"></use>
+            </svg>
           </div>
 
           <div class="form-field">
-            <input type="email" class="form-input" name="email" id="email" />
-            <label for="email" class="form-label" placeholder="username@email"
-              >Почта</label
-            >
+            <input
+              type="email"
+              class="form-input"
+              name="email"
+              id="email"
+              placeholder=" "
+            />
+            <label for="email" class="form-label">Почта</label>
+            <svg class="icon-form" width="18" height="18">
+              <use href="./images/sprite.svg#icon-mail"></use>
+            </svg>
           </div>
 
           <div class="form-comment">
@@ -467,18 +488,43 @@
               class="comment"
               id="comment"
               cols=""
+              placeholder="Комментарий"
             ></textarea>
-            <label for="comment">Комментарий</label>
           </div>
 
-          <div class="form-checkbox">
-            <input type="checkbox" name="agreement" id="agreement" />
+          <!-- <div class="form-checkbox">
+            <input
+              type="checkbox"
+              class="checkbox"
+              name="agreement"
+              id="agreement"
+            />
             <label for="agreement"
               >Соглашаюсь с рассылкой и принимаю Условия договора</label
             >
-          </div>
+          </div> -->
 
-          <button type="submit">Отправить</button>
+          <label for="agreement" class="agreement"
+            >Соглашаюсь с рассылкой и принимаю<a
+              class="link-agreement"
+              href="#"
+              target="_blank"
+              title="Условия договора"
+            >
+              Условия договора</a
+            >
+            <input
+              type="checkbox"
+              class="checkbox"
+              name="agreement"
+              id="agreement"
+            />
+            <svg class="icon-check" width="16" height="15">
+              <use href="./images/sprite.svg#icon-check"></use>
+            </svg>
+          </label>
+
+          <button type="submit" class="form-submit">Отправить</button>
         </form>
       </div>
     </div>

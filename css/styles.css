@@ -244,7 +244,6 @@ body {
   text-decoration: none;
   border-radius: 4px;
   padding: 17px 32px;
-  border: 1px solid transparent;
   display: inline-block;
   border: none;
 
@@ -257,6 +256,7 @@ body {
 .hero .button:focus {
   background-color: var(--secondary-accent-color);
   color: var(--accent-color);
+  border: none;
   cursor: pointer;
 }
 
@@ -820,6 +820,13 @@ img {
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: #2f303a;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:hover,
+.input:focus {
+  border-color: var(--accent-color);
 }
 
 .submit {
@@ -855,15 +862,7 @@ img {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.2);
-}
+/* Модальное окно, форма */
 
 .backdrop .is-hidden {
   visibility: hidden;
@@ -875,7 +874,13 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
+
+  background: var(--primery-background-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .modal-close {
@@ -883,6 +888,9 @@ img {
   z-index: 1;
 
   right: 0;
+  padding: 5px;
+  margin-right: 8px;
+  margin-top: 8px;
 
   width: 30px;
   height: 30px;
@@ -890,6 +898,14 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+  background-color: var(--accent-color);
+  fill: var(--secondary-accent-color);
+  border: 1px solid transparent;
 }
 
 .feedback {
@@ -935,6 +951,7 @@ img {
   margin: 0;
   padding-top: 12px;
   padding-bottom: 12px;
+  padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -943,41 +960,114 @@ img {
 
 .form-label {
   position: absolute;
-  margin-bottom: 4px;
   top: 50%;
-  left: 43px;
-  transform: translateY(-50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  left: 42px;
+  transform: translate(0%, -60%) scale(1, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:hover + .form-label,
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
   color: var(--accent-color);
-  left: 10px;
-  transform: translateY(-40px);
+  transform: translate(-70%, -40px) scale(0.9, 0.9);
 }
 
-.form-input:focus {
+.form-input:focus,
+.form-input:hover,
+.comment:focus,
+.comment:hover {
   border: 1px solid var(--accent-color);
 }
 
-textarea {
+.comment {
   resize: none;
   width: 100%;
+  min-height: 120px;
   margin-bottom: 20px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
-.form-checkbox {
-  margin-bottom: 31px;
-  font-size: 12px;
-  line-height: 1.16;
+.icon-form {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+
+  display: inline-block;
+}
+
+.form-input:hover ~ .icon-form,
+.form-input:focus ~ .icon-form {
+  fill: var(--accent-color);
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.agreement {
+  display: inline-block;
+  margin-bottom: 30px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: #757575;
 }
 
-.comment {
-  padding: 12px 16px;
+.icon-check {
+  display: inline-block;
+
+  border-radius: 2px;
+
+  border: 2px solid var(--title-text-color);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .icon-check {
+  background-color: var(--accent-color);
+  border: 1px solid transparent;
+}
+
+.checkbox:hover + .icon-check {
+  border-color: var(--accent-color);
+}
+
+.link-agreement {
+  color: var(--accent-color);
+}
+
+.form-submit {
+  padding: 0;
+  width: 200px;
+  height: 50px;
+
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--accent-color);
+  color: var(--secondary-accent-color);
+
+  transform: translateX(50%);
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-submit:hover {
+  background-color: var(--secondery-background-color);
+  color: var(--accent-color);
 }
 
 /* .visually-hidden {
