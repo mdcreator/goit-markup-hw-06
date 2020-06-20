@@ -887,6 +887,7 @@ img {
   position: absolute;
   z-index: 1;
 
+  top: 0;
   right: 0;
   padding: 5px;
   margin-right: 8px;
@@ -978,6 +979,7 @@ img {
 .comment:focus,
 .comment:hover {
   border: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 .comment {
@@ -1026,6 +1028,7 @@ img {
 
 .icon-check {
   display: inline-block;
+  position: absolute;
 
   border-radius: 2px;
 
